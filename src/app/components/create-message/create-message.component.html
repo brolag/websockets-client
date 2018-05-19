@@ -1,0 +1,11 @@
+<mat-card>
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput autofocus [(ngModel)]="message.author" name="author" type="text" class="form-control" placeholder="Name...">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput (keyup.enter)="sendMsg()" [(ngModel)]="message.message" name="msg" type="text" class="form-control" placeholder="Message...">
+    </mat-form-field>
+    <button mat-fab color="accent" (click)="sendMsg()">Send</button>
+  </div>
+</mat-card>

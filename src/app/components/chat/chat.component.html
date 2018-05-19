@@ -1,0 +1,8 @@
+<mat-card class="no-shadow">
+  <mat-card-subtitle>Recieved messages:</mat-card-subtitle>
+  <mat-card-content>
+    <p *ngFor="let msg of messages">
+      <strong>({{msg.author}})</strong>
+      {{msg.message}} ({{msg.newDate}})</p>
+  </mat-card-content>
+</mat-card>

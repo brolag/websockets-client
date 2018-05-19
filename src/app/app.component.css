@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.chat-container {
+  flex: 1;
+  max-height: 514px;
+  overflow: scroll;
+}
