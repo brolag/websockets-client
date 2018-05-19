@@ -9,7 +9,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { CreateMessageComponent } from './components/create-message/create-message.component';
 
 // Services
-import { WebsocketService } from './services/websocket/websocket.service';
+import { WebSocketService } from './services/websocket/websocket.service';
 import { ChatService } from './services/chat/chat.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -27,7 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialAppModule
   ],
   providers: [
-    WebsocketService,
+    WebSocketService,
     ChatService
   ],
   bootstrap: [AppComponent]

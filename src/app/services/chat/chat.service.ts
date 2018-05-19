@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { WebsocketService } from '../websocket/websocket.service';
 import { map, filter } from 'rxjs/operators';
-
-const CHAT_URL = 'ws://localhost:3005';
+import { WebSocketService } from '../websocket/websocket.service';
+import { CHAT_URL } from './chat.config';
 
 export interface Message {
   author: string;
@@ -15,7 +14,7 @@ export interface Message {
 export class ChatService {
   public messages: Subject<Message> = new Subject<Message>();
 
-  constructor(private wsService: WebsocketService) {
+  constructor(private wsService: WebSocketService) {
     this.messages = <Subject<Message>>this.wsService
       .connect(CHAT_URL)
       .pipe(
